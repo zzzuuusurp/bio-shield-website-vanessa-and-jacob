@@ -23,12 +23,11 @@
 <body>
     <h2>Contact Form:</h2>
     <form>
-        <label for="email">Enter your email here: </label><br>
-        <input type="text" id="email" name="email" placeholder="Email"><br>
-        <label for="name">Enter your first name and last name here:</label><br>
-        <input type="text" id="name" name="name" placeholder="Rory Nite"><br>
-        <label for="complaint">What you want to say:</label><br>
-        <input class="textbox"type="text" id="complaint" name="complaint" placeholder="File your complaint"><br>
+        <div class="emailname">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="text" id="name" name="name" placeholder="Name">
+        </div>
+        <input type="text" id="complaint" name="complaint" placeholder="File your complaint"><br>
         <input class="submit" type="submit" value="Submit">
     </form>
 </body>
