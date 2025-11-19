@@ -11,7 +11,7 @@ Warm Brown (#8B6F47)
 /* general formatting */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+    font-size: 1em;
     text-align: left;
 }
 h1,h2,h3,h4,h5,h6 {
@@ -29,13 +29,14 @@ img {
 /* navbar */
 nav {
     padding: 0;
+    width: 100%;
     border: 1px solid red;
 }
 nav > ul > li > a {
     background-color: #F5F1E3;
     color: white;
     text-decoration: none;
-    font-size: x-large;
+    font-size: 2em;
 }
 nav > ul {
     display: flex;
@@ -43,7 +44,16 @@ nav > ul {
     justify-content: space-around;
     list-style-type: none;
 }
-
+img[src="images/gpt-bioshield-image.png"] {
+    border: none;
+}
+a.logo:hover {
+   background-color: transparent;
+}
+.logo {
+    user-select: none;
+    background-color: transparent;
+}
 
 
 /* hero image stuff */
@@ -62,7 +72,11 @@ nav > ul {
 .od2 {
     order: 1;
 }
-
+.boutton {
+    background-color: white; 
+    width: 40%; 
+    height: 35px;
+}
 
 /* purchase info */
 .items {
@@ -87,68 +101,90 @@ nav > ul {
     height: 50px;
     margin-top: 5px;
 }
+.buybutton:hover {
+    background-color: #79C45E;
+    color: #FFF;
+}
+.seeall {
+    width: 90%;
+    padding: 15px 30%;
+    height: 50px;
+    background-color: limegreen;
+    text-decoration: none; 
+    color: white;
+}
+.all {
+    margin: 25px 0px;
+}
+
 /* contact us form */
 
+.emailname {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
+.emailname > input {
+    width: 42.5%;
+    height: 30px;
+    margin: 10px;
+    font-size: 1.5em;
+}
+input[id="complaint"] {
+    width: 80%;
+    height: 150px;
+    margin: 10px;
+    font-size: 1.5em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8B6F47;
+    padding: 3%;
+}
 .submit {
     width:60%;
     height: 50px;
     color: white;
     background-color: #F5F1E3;
     border-width: 1px;
-    font-size: x-large;
+    font-size: 2em;
 }
-.links {
-    color: aquamarine;
-    background-color: lightgreen;
+.space {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.seeall:hover {
-    background-color: yellow;
-    color: dodgerblue;
+img[alt="cute bug smiling illustration free vector"] {
+    width: 50%;
+    margin-top: 20px;
+    border: none;
 }
 
+/* contact us */
 
-
-section > ul > li {
-    margin: 2;
-    list-style-type: none;
-    display: inline-block;
-}
-.logo {
-    user-select: none;
-    background-color: transparent;
-}
 .formfile {
-    font-size: larger;
+    font-size: 1.75em;
     font-style: oblique;
 }
 .formfile > a {
     background-color: lime;
 }
-.seeall {
-    width: 90%;
+.social {
+    display: flex;
+    padding: 3%;
+    background-color: #2E7D32;
+}
+.social > img {
     height: 50px;
-    background-color: limegreen;
-    color: white;
+    border: none;
 }
 
-.formfile > a:hover {
-    background-color: yellow;
-}
-.buybutton:hover {
-    background-color: yellow;
-}
-.boutton {
-    background-color: white; 
-    width: 40%; 
-    height: 35px;
-}
-.boutton:hover {
-    background-color: yellow;
-    color: dodgerblue;
-}
 
 /* about us page */
 .aboutus {
@@ -207,10 +243,20 @@ section > ul > li {
     background-color: #79C45E;
     color: white;
 }
+
+
 /* footer  */
 footer {
-    background-color: aqua;
-    text-align: right;
+    background-color: darkgray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width:100%;
     height: 75px;
+}
+small {
+    font-size: small;
+    color: white;
 }
