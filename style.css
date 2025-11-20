@@ -25,22 +25,41 @@ img {
     border: 1px solid #F5F1E3;
     border-radius: 15px;
 }
+.center {
+    text-align: center;
+}
 
 /* navbar */
 nav {
+    position: fixed;
     padding: 0;
     width: 100%;
-    border: 1px solid red;
+    background-color: #8B6F47;
+    margin-bottom: 10%;
+    margin-top: 0px;
 }
 nav > ul > li > a {
-    background-color: #F5F1E3;
+    background-color: #2E7D32;
     color: white;
+    padding: 2% 0%;
     text-decoration: none;
     font-size: 2em;
 }
+
+@keyframes wonderhoy {
+        from {background-color: #2E7D32; color: white;}
+        to {background-color: #79C45E; color: #8B6F47;}
+    }
+
+nav > ul > li > a:hover {
+   animation: wonderhoy 1s forwards; 
+}
+nav > ul > li > a.logo {
+    animation: none;
+}
 nav > ul {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
     list-style-type: none;
 }
@@ -50,8 +69,10 @@ img[src="images/gpt-bioshield-image.png"] {
 a.logo:hover {
    background-color: transparent;
 }
+
 .logo {
     user-select: none;
+    align-self: flex-end;
     background-color: transparent;
 }
 
@@ -60,20 +81,28 @@ a.logo:hover {
 .hero {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #8B6F47;
 }
 .heroimage {
-    width: 75%;
+    width: 100%;
 }
 .od1 {
     order: -1;
+    padding-left: 4%;
+    width: 50%;
 
 }
 .od2 {
     order: 1;
+    width: 40%;
 }
 .boutton {
-    background-color: white; 
+    background-color: white;
+    font-size: 1.25em; 
+    padding: 2% 10%;
+    text-decoration: none;
+    color: black;
     width: 40%; 
     height: 35px;
 }
@@ -155,10 +184,14 @@ form {
     border-width: 1px;
     font-size: 2em;
 }
+
 .space {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 img[alt="cute bug smiling illustration free vector"] {
     width: 50%;
@@ -171,6 +204,12 @@ img[alt="cute bug smiling illustration free vector"] {
 .formfile {
     font-size: 1.75em;
     font-style: oblique;
+    justify-self: center;
+    text-align: center;
+    background-color: antiquewhite;
+    width: 50%;
+    padding: 3%;
+    margin: 10% 0%;
 }
 .formfile > a {
     background-color: lime;
@@ -179,6 +218,7 @@ img[alt="cute bug smiling illustration free vector"] {
     display: flex;
     padding: 3%;
     background-color: #2E7D32;
+    margin: 5% 0%;
 }
 .social > img {
     height: 50px;
@@ -255,8 +295,48 @@ footer {
     align-items: center;
     width:100%;
     height: 75px;
+    margin-top: 15%;
 }
 small {
     font-size: small;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .od1, .od2 {
+        order: initial;
+        width: 80%;
+        padding: 0;
+    }
+    .items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .purchase {
+        width: 80%;
+    }
+    .emailname {
+        flex-direction: column;
+    }
+    .emailname > input {
+        width: 80%;
+    }
+    .aboutus {
+        padding: 5%;
+    }
+    .part {
+        flex-direction: column;
+    }
+    .thatimage, .story {
+        width: 100%;
+        text-align: center;
+    }
+    nav > ul > li > a {
+        font-size: 1em;
+        padding: 1%;
+    }
 }
