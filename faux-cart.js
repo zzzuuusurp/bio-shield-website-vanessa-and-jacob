@@ -1,8 +1,8 @@
 const
     // set the name of your shop here
-    shopID = 'Bioshield',
+    shopID = 'testShop',
     // match the following attributes to the classes on your products
-    productClass = 'prodClass',
+    productClass = 'product',
     imageClass = 'prodImage',
     nameClass = 'prodName',
     descClass = 'prodDesc',
@@ -155,7 +155,7 @@ function updateCart() {
     cartHTML += `
         <div class="cartTotal">
             <h3>Total: ${formatCurrency(total)}</h3>
-            <a href="#" id="emptyCart">Empty Cart</a>
+            <a href="#" id="emptyCart">Checkout</a>
         </div>
     `;
     // render the cart HTML

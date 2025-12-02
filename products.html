@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Product" - Bioshield</title>
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Product Page with demo test</title>
     <link rel="stylesheet" href="style.css">
+    <script src="faux-cart.js"></script>
 </head>
-<!--navbar-->
+
 <body>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="logo"><img src="images/gpt-bioshield-image.png" alt="BioShield Logo" style="width:50px;"></a></li>
-                <li><a href="products.html">View Our Products</a></li>
-                <li><a href="about-us.html">View Our Mission</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <nav>
+            <a href="index.html" class="logo"><img src="images/gpt-bioshield-image.png" alt="BioShield Logo" style="width:50px;"></a>
+            <a href="products.html">View Our Products</a>
+            <a href="about-us.html">View Our Mission</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="cart.html">Cart<span id="cartItemCount"></span></a>
+    </nav>
 
+    <main>
+        <header>
+            <h1>Our Products</h1>
+            <p>Click "Add to Cart" on any item you wish to buy. When you are finished, go to your cart at the top of the screen.</p>
+        </header>
+        <h2>Products</h2>
+        <div id="products">
 
-    <h1 style="text-align: center;">View All Of Our Products:</h1>
-    <!--product page in the form of an invisible table-->
-    <div class="items">
-        <div class="purchase">
-            <h3>Bug Repellent spray</h3><hr style="background-color: black; border: none; height: 1px;">
-            <p>A natural insect spray made from plant-derived ingredients, offering effective protection</p>
-            <img width="100%" src="images/bugrepell.jpg" alt="Bioshield's bug repellent spray.">
-            <br>
-            <a class="buybutton">$7.00 Each</a>
-        </div>
-        <div class="purchase">
-            <h3>Bug Repellent Bracelet</h3><hr style="background-color: black; border: none; height: 1px;">
-            <p>Infused with natural insect repellent oils, wearable items that can repel bugs without applying onto skin or as an additional layer.</p>
-            <img width="100%" src="images/bugbracletell.jpg" alt="BioShield's all-powerful bug repellent bracelet.">
-            <br>
-            <a class="buybutton">$2.50 Each</a>
-        </div>
-        <div class="purchase">
-            <h3>Bug Repellent Sticker</h3><hr style="background-color: black; border: none; height: 1px;">
-            <p>We stuck this sticker on my kid for a week and he ended up never getting bit. so it's really effective!</p>
-            <img width="100%" src="images/bugstickerell.jpg" alt="BioShield's all-powerful bug repellent bracelet.">
-            <br>
-            <a class="buybutton">$.50 Each</a>
-        </div>
-        <div class="purchase">
-            <h3>Bug Repellent Towel</h3><hr style="background-color: black; border: none; height: 1px;">
-            <p>We used this towel all weak and never got bit, so it's really effective!</p>
-            <img width="100%" src="images/bugtowelell.jpg" alt="BioShield's all-powerful bug repellent towel.">
-            <br>
-            <a class="buybutton">$12.00 Each</a>
-        </div>
-        <div class="purchase">
-            <h3>Bug Repellent Baby Lotion</h3><hr style="background-color: black; border: none; height: 1px;">
-            <p>Protect your baby naturally! Our bug repellent baby lotion uses gentle, plant-based ingredients proven to keep mosquitoes and bugs away.</p>
-            <img width="100%" src="images/bugbabylotionell.jpg" alt="BioShield's all-powerful bug repellent baby lotion.">
-            <br>
-            <a class="buybutton">$8.00 Each</a>
-        </div>
-        <div class="purchase">
-            <h3>Raise the rent on the bugs</h3><hr style="background-color: black; border: none; height: 1px;">
-            <p>&quot;It's eco-friendly because it only kills the bugs' mental health!&quot;</p>
-            <img width="100%" src="images/evict-all-ants.jpg">
-            <br>
-            <a class="buybutton" href="product_raiserent.html">FREE!</a>
-        </div>
-    </div>
+            <div class="product">
+                <img src="images/evict-all-ants.jpg" alt="An outpriced COMMONER bug" class="prodImage">
+                <h3 class="prodName">Raise the Rent on all Bugs</h3>
+                <p class="prodDesc">&quot;It's eco-friendly because it only kills the bugs' mental health!&quot;</p>
+                <span class="prodPrice">1000.00</span><a href="#" class="addToCart prodBtn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="images/bugrepell.jpg" alt="Bug repellant spray" class="prodImage">
+                <h3 class="prodName">Bug Repellent Spray</h3>
+                <p class="prodDesc">A natural insect spray made from plant-derived ingredients, offering effective protection</p>
+                <span class="prodPrice">7.00</span><a href="#" class="addToCart prodBtn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="images/bugbracletell.jpg" alt="Bug repellant bracelet" class="prodImage">
+                <h3 class="prodName">Bug Repellent Bracelet</h3>
+                <p class="prodDesc">Infused with natural insect repellent oils, wearable items that can repel bugs without applying onto skin or as an additional layer.</p>
+                <span class="prodPrice">2.50</span><a href="#" class="addToCart prodBtn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="images/bugbracletell.jpg" alt="Bug repellant bracelet" class="prodImage">
+                <h3 class="prodName">Bug Repellent Sticker</h3>
+                <p class="prodDesc">We stuck this sticker on my kid for a week and he ended up never getting bit. so it's really effective!</p>
+                <span class="prodPrice">0.50</span><a href="#" class="addToCart prodBtn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="images/bugtowelell.jpg" alt="Bug repellant towel" class="prodImage">
+                <h3 class="prodName">Bug Repellent Towel</h3>
+                <p class="prodDesc">We used this towel all weak and never got bit, so it's really effective!</p>
+                <span class="prodPrice">12.00</span><a href="#" class="addToCart prodBtn">Add to Cart</a>
+            </div>
+            <div class="product">
+                <img src="images/bugbabylotionell.jpg" alt="Demo Image" class="prodImage">
+                <h3 class="prodName">Bug Repellent Baby Lotion</h3>
+                <p class="prodDesc">Protect your baby naturally! Our bug repellent baby lotion uses gentle, plant-based ingredients proven to keep mosquitoes and bugs away.</p>
+                <span class="prodPrice">8.00</span><a href="#" class="addToCart prodBtn">Add to Cart</a>
+            </div>
 
-    
-    <!--keep bottom-->
+        </div>
+    </main>
     <footer>
+        <p>&copy;2023 Jared Fast</p>
         <small>We are not responsible for any deaths caused by our potentially contaminated products </small><br>
-        <small>&#169Bioshield 2025</small>
+        <small>&copy;Bioshield 2025</small>
     </footer>
+
 </body>
+
 </html>

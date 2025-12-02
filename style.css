@@ -17,6 +17,7 @@ body {
     font-family: HandCaps,Arial, Helvetica, sans-serif;
     font-size: 1em;
     text-align: left;
+    margin: 0px;
 }
 h1,h2,h3,h4,h5,h6 {
     color: black;
@@ -53,13 +54,13 @@ nav > ul > li > a {
         to {background-color: #79C45E; color: #8B6F47;}
     }
 
-nav > ul > li > a:hover {
+nav > a:hover {
    animation: wonderhoy 1s forwards; 
 }
-nav > ul > li > a.logo {
+nav > a.logo {
     animation: none;
 }
-nav > ul {
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -112,38 +113,6 @@ a.logo:hover {
     height: 35px;
 }
 
-/* purchase info */
-.items {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.buybutton {
-    background-color: lightgreen;
-    width: 100%;
-    height: 3vh;
-    text-decoration: none;
-    color: black;
-    padding-top: 10px;
-    border: black 2px solid;
-    margin: 0% 1%;
-}
-.buybutton:hover {
-    background-color: #79C45E;
-    color: #FFF;
-}
-.seeall {
-    width: 90%;
-    padding: 15px 30%;
-    height: 50px;
-    background-color: limegreen;
-    text-decoration: none; 
-    color: white;
-}
-.all {
-    margin: 25px 0px;
-}
-
 /* contact us form */
 
 .emailname {
@@ -160,6 +129,7 @@ a.logo:hover {
     margin: 10px;
     font-size: 1.5em;
 }
+
 input[id="complaint"] {
     width: 80%;
     height: 150px;
@@ -475,7 +445,21 @@ nav>a:hover {
 footer {
     text-align: center;
 }
-
+.seeall {
+    padding: 1% 35%;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #F6E7A1;
+    text-decoration: none;
+    color: black;
+}
+.all {
+    padding-top: 3%;
+    width:100%;
+    padding: 2%;
+    text-align: center;
+    justify-content: center;
+}
 
 
 
