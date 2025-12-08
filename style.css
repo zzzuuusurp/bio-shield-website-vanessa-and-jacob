@@ -458,16 +458,46 @@ footer {
     text-decoration: none;
     color: black;
 }
-
-
+.nomarge {
+    margin: 0;
+}
+.all {
+    margin-top: 5%;
+}
 @media screen and (max-width: 1024px) {
+    p {
+        font-size: 1.4em;
+    }
+    h2, h3 {
+        font-size: 1.8em;
+    }
+    .prodPrice {
+        font-size: 1.4em;
+    }
     #products {
         grid-template-columns: repeat(2, 1fr);
     }
     .prodBtn {
-        width: 80%;
+        width: 65%;
     }
-    
+    .heroimage {
+        width: 60%
+    }
+    .part {
+        text-align: center;
+        font-size: 1.4em;
+    }
+    .hero {
+        padding-bottom: 10%;
+        overflow-y: hidden;
+    }
+    .cartItemInfo {
+        font-size: 0.8em;
+    }
+    .cartItemPricing {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -504,7 +534,7 @@ footer {
         text-align: center;
     }
     #products {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
         padding: 0.5rem;
     }
 
