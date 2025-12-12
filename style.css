@@ -13,13 +13,19 @@ Warm Brown (#8B6F47)
     font-family: HandCaps;
     src: url(font/Handcaps.otf);
 }
+.lastresort {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 body {
+    height: 100vh;
     font-family: HandCaps,Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     font-size: 1em;
     text-align: left;
     margin: 0px;
-    background-color: skyblue;
+    background-color: #87ceeb;
 }
 h1,h2,h3,h4,h5,h6 {
     color: black;
@@ -35,7 +41,11 @@ img {
 .center {
     text-align: center;
 }
-
+.filler {
+    border: orangered;
+    width: 100vw;
+    height: 200px;
+}
 /* navbar */
 nav {
     position: fixed;
@@ -89,7 +99,7 @@ a.logo:hover {
     text-shadow: #000 1px 1px 1px;
 }
 .heroimage {
-    width: 100%;
+    width: 65%;
 }
 .od1 {
     order: -1;
@@ -139,6 +149,9 @@ input[id="complaint"] {
 }
 form {
     display: flex;
+    width: 80vw;
+    align-self: center;
+    border-radius: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -188,6 +201,9 @@ img[alt="cute bug"] {
 .social {
     display: flex;
     padding: 3%;
+    width: 60vw;
+    justify-self: center;
+    border-radius: 20px;
     background-color: #79C45E;
     margin: 5% 0%;
 }
@@ -245,7 +261,7 @@ img[alt="cute bug"] {
 }
 .yokoso {
     font-size: 1.5em;
-    text-align: center;
+    text-align: left;
     padding: 10%;
 }
 .part {
@@ -274,7 +290,6 @@ footer {
     align-items: center;
     width:100vw;
     height: fit-content;
-    margin-top: 15%;
     padding-top: 5%;
 }
 small {
@@ -314,8 +329,12 @@ header {
 .cartItem:hover {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
-
+@keyframes kirakira {
+    from {width: 0%;}
+}
 .prodImage {
+    animation: kirakira 2s .5s forwards;
+    animation-fill-mode: forwards;
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 2;
@@ -473,9 +492,13 @@ footer {
 }
 .all {
     margin-top: 5%;
+    margin-bottom: 5%;
     align-content: center;
     justify-content: center;
     text-align: center;
+}
+.autext {
+    text-align: left;
 }
 @media screen and (min-width: 1025px) {
     nav {
@@ -510,7 +533,7 @@ footer {
         width: 60%
     }
     .part {
-        text-align: center;
+        text-align: left;
         font-size: 1.4em;
     }
     .hero {
@@ -529,19 +552,22 @@ footer {
     }
     .thatimage, .story {
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
     .part>p {
-        text-align: center;
+        text-align: left;
         justify-self: center;
         align-self: center;
+    }
+    footer {
+        padding-bottom: 15vh;
     }
 }
 
 @media screen and (max-width: 768px) {
     .hero {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
     .od1, .od2 {
         order: initial;
@@ -607,5 +633,8 @@ footer {
     nav>a {
         margin-left: 0rem;
         font-size: .75em;
+    }
+    footer {
+        padding-bottom: 10vh;
     }
 }
