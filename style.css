@@ -18,7 +18,12 @@ Warm Brown (#8B6F47)
     flex-direction: column;
     justify-content: space-between;
 }
+#white {
+    color: white;
+}
 body {
+    padding: 0px;
+    margin-left:0px;
     height: 100vh;
     font-family: HandCaps,Arial, Helvetica, sans-serif;
     overflow-x: hidden;
@@ -33,6 +38,7 @@ h1,h2,h3,h4,h5,h6 {
 a:hover:only-child, .boutton:hover, .submit:hover, .seeall:hover {
     color: dodgerblue;
     background-color: yellow;
+    box-shadow: #000 1.5px 1px 4px;
 }
 img {
     border: 1px solid #F5F1E3;
@@ -56,7 +62,9 @@ nav {
     margin-bottom: 10%;
     margin-top: 0%;
 }
-
+.mobile {
+    display: none;
+}
 @keyframes wonderhoy {
         to {background-color: orange; color: white;}
     }
@@ -317,7 +325,8 @@ header {
 }
 
 .product {
-    min-width: 30vw;
+    animation: kirakira 2s .5s forwards;
+    animation-fill-mode: forwards;
     border: solid 1px black;
     background-color: #79C45E;
     padding: 0.5rem;
@@ -330,11 +339,9 @@ header {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 @keyframes kirakira {
-    from {width: 0%;}
+    from {opacity: 0; transform: scale(0.95);}
 }
 .prodImage {
-    animation: kirakira 2s .5s forwards;
-    animation-fill-mode: forwards;
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 2;
@@ -562,9 +569,30 @@ footer {
     footer {
         padding-bottom: 15vh;
     }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    #cartItemCount::after {
+        content: "";
+    }
+    #cartItemCount::before {
+        content: "-"; 
+    }
+    .cartTotal {
+        margin-right: 5%;
+    }
+    .cartItemInfo > p {
+        display: none;
+    }
+    .cartItemInfo {
+        padding-top: 15%;
+    }
     .hero {
         flex-direction: column;
         text-align: left;
@@ -590,7 +618,9 @@ footer {
     .aboutus {
         padding: 5%;
     }
-    
+    .prodPrice {
+        font-size: 1.2em;
+    }
     #products {
         grid-template-columns: repeat(1, 1fr);
         padding: 0.5rem;
@@ -633,6 +663,9 @@ footer {
     nav>a {
         margin-left: 0rem;
         font-size: .75em;
+    }
+    nav > img {
+        width: 5vw;
     }
     footer {
         padding-bottom: 10vh;
