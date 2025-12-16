@@ -98,11 +98,12 @@ a.logo:hover {
 /* hero image stuff */
 .hero {
     margin-top: 10%;
+    width: 98vw;
     display: flex;
     align-items: center;
+    justify-self: center;
     justify-content: space-between;
     background-color: #79c45eb8;
-    overflow-y: scroll;
     color: white;
     text-shadow: #000 1px 1px 1px;
 }
@@ -265,6 +266,7 @@ img[alt="cute bug"] {
     width: 40%;
     opacity: 0.8;
     padding: 2%;
+    font-size: 1.5em;
     align-self: center;
 }
 .yokoso {
