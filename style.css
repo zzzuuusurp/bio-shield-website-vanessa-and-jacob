@@ -523,6 +523,12 @@ footer {
         padding: 0;
         margin: 0;
     }
+    #cartItemCount::after {
+        content: "";
+    }
+    #cartItemCount::before {
+        content: ""; 
+    }
     p {
         font-size: 1.4em;
     }
@@ -568,6 +574,10 @@ footer {
         justify-self: center;
         align-self: center;
     }
+    .story {
+        padding: 5%;
+        font-size: 1em;
+    }
     footer {
         padding-bottom: 15vh;
     }
@@ -580,12 +590,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    #cartItemCount::after {
-        content: "";
-    }
-    #cartItemCount::before {
-        content: "-"; 
-    }
     .cartTotal {
         margin-right: 5%;
     }
